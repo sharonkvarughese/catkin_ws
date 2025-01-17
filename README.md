@@ -1,12 +1,18 @@
 clone the file to catkin workspace ;
 
+clone pid controller and robot pose efk and asv_wave_sim for gazebo 11 supported to src folder
+
+sudo apt-get install ros-neotic-pid
+https://github.com/srmainwaring/asv_wave_sim.git
+
+place ocean_top_view.world into src/asv_wave_sim/asv_wave_sim_gazebo/worlds
+and place 
+
 cd ~/catkin_ws
 
 catkin_make_isolated --install
 
 source install_isolated/setup.bash
-
-
 
 to launch three times scenario;
 
