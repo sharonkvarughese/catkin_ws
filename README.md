@@ -6,7 +6,7 @@ sudo apt-get install ros-neotic-pid
 https://github.com/srmainwaring/asv_wave_sim.git
 
 place ocean_top_view.world into src/asv_wave_sim/asv_wave_sim_gazebo/worlds folder
-and place ocean_world_top.launch into src/asv_wave_sim/asv_wave_sim_gazebo/launch folder
+and place ocean_world_top.launch into src/asv_wave_sim/asv_wave_sim_gazebo/launch folder.
 
 cd ~/catkin_ws
 
