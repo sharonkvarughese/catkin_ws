@@ -23,9 +23,9 @@
           
 <!-- Speed Controller -->
 <node name="speed_controller" pkg="pid" type="controller" output="screen">
-    <param name="Kp" value="1.0"/>  
-    <param name="Ki" value="0.0001"/>
-    <param name="Kd" value="0.001"/>
+    <param name="Kp" value="1.5"/>  
+    <param name="Ki" value="0.4"/>
+    <param name="Kd" value="0.3"/>
     <param name="upper_limit" value="2.0"/>
     <param name="lower_limit" value="-2.0"/>
     <param name="autotune_type" value="zn"/>
@@ -37,9 +37,9 @@
 
 <!-- Heading Controller -->
 <node name="heading_controller" pkg="pid" type="controller" output="screen">
-    <param name="Kp" value="1.0"/>
-    <param name="Ki" value="0.0001"/>
-    <param name="Kd" value="0.006"/>
+    <param name="Kp" value="1.2"/>
+    <param name="Ki" value="0.4"/>
+    <param name="Kd" value="0.2"/>
     <param name="upper_limit" value="1.5"/>
     <param name="lower_limit" value="-1.5"/>
     <param name="autotune_type" value="zn"/>
@@ -51,9 +51,9 @@
 
 <!-- Turn Rate Controller -->
 <node name="turn_rate_controller" pkg="pid" type="controller" output="screen">
-    <param name="Kp" value="1.0"/>
-    <param name="Ki" value="0.001"/>
-    <param name="Kd" value="0.021"/>
+    <param name="Kp" value="0.9"/>
+    <param name="Ki" value="0.2"/>
+    <param name="Kd" value="0.15"/>
     <param name="upper_limit" value="1.0"/>
     <param name="lower_limit" value="-1.0"/>
     <param name="autotune_type" value="zn"/>
@@ -92,15 +92,6 @@
         <param name="scenario" value="$(arg scenario)"/>
         <param name="turn_direction" value="$(arg turn_direction)"/>
     </node>
-
-    <!-- Trajectory Plotter -->
-    <node name="trajectory_plotter" pkg="sailboat_sim" type="trajectory_plotter.py" output="screen">
-        <param name="scenario" value="$(arg scenario)"/>
-        <param name="turn_direction" value="$(arg turn_direction)"/>
-    </node>
-  
-    <node name="dynamics_plotter" pkg="sailboat_sim" type="dynamics_plotter.py" output="screen"/>
-    
 
     <!-- Camera visualization -->
     <node name="camera_view" pkg="image_view" type="image_view" respawn="false" output="screen">
